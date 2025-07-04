@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-06 09:46:22 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMDQ7MDY6MTU6NDQg7Jik7KCEOzEwMzc5OQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMDY7MDk6NDY6MjIg7Jik7KCEOzU7MTAzOTE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#49884;&#51089;" type="Integer" array="False" size=""/>
+            <declare name="&#45149;" type="Integer" array="False" size=""/>
+            <declare name="&#54633;" type="Integer" array="False" size=""/>
+            <assign variable="&#49884;&#51089;" expression="1"/>
+            <assign variable="&#45149;" expression="10"/>
+            <assign variable="&#54633;" expression="0"/>
+            <declare name="&#51221;&#49688;" type="Integer" array="False" size=""/>
+            <for variable="&#51221;&#49688;" start="&#49884;&#51089;" end="&#45149;" direction="inc" step="1">
+                <assign variable="&#54633;" expression="&#54633; + &#51221;&#49688;"/>
+            </for>
+            <output expression="&#49884;&#51089; &amp; &quot;&#48512;&#53552; &quot; &amp; &#45149; &amp; &quot;&#44620;&#51648;&#51032; &#54633;&#51008; &quot; &amp; &#54633;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

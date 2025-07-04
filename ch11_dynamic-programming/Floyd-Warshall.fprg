@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-04 01:43:27 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOMzA7MjAyNC0wNS0wNDsxMjoxNzo0NCDsmKTsoIQ7MTAzODk4"/>
+        <attribute name="edited" value="eW9uZztPTUVOMzA7MjAyNC0wNS0wNDswMTo0MzoyNyDsmKTsoIQ7MTc7MTA0MDU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#47924;&#54620;&#45824;" type="Integer" array="False" size=""/>
+            <assign variable="&#47924;&#54620;&#45824;" expression="2 ^ 31 - 1"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="5"/>
+            <declare name="D" type="Integer" array="True" size="n * n * (n + 1)"/>
+            <assign variable="D[0]" expression="0"/>
+            <assign variable="D[1]" expression="3"/>
+            <assign variable="D[2]" expression="8"/>
+            <assign variable="D[3]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[4]" expression="-4"/>
+            <assign variable="D[5]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[6]" expression="0"/>
+            <assign variable="D[7]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[8]" expression="1"/>
+            <assign variable="D[9]" expression="7"/>
+            <assign variable="D[10]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[11]" expression="4"/>
+            <assign variable="D[12]" expression="0"/>
+            <assign variable="D[13]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[14]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[15]" expression="2"/>
+            <assign variable="D[16]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[17]" expression="-5"/>
+            <assign variable="D[18]" expression="0"/>
+            <assign variable="D[19]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[20]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[21]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[22]" expression="&#47924;&#54620;&#45824;"/>
+            <assign variable="D[23]" expression="6"/>
+            <assign variable="D[24]" expression="0"/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <for variable="k" start="0" end="n - 1" direction="inc" step="1">
+                <declare name="i" type="Integer" array="False" size=""/>
+                <for variable="i" start="0" end="n - 1" direction="inc" step="1">
+                    <declare name="j" type="Integer" array="False" size=""/>
+                    <for variable="j" start="0" end="n - 1" direction="inc" step="1">
+                        <declare name="&#52572;&#45800;&#44221;&#47196;" type="Integer" array="False" size=""/>
+                        <assign variable="&#52572;&#45800;&#44221;&#47196;" expression="min(D[k * 25 + i * 5 + j], D[k * 25 + i * 5 + k] + D[k * 25 + k * 5 + j])"/>
+                        <output expression="&quot;D[&quot; &amp; i &amp; &quot;, &quot; &amp; j &amp; &quot;](&quot; &amp; k + 1 &amp; &quot;) : &quot; &amp; &#52572;&#45800;&#44221;&#47196;" newline="True"/>
+                        <assign variable="D[(k + 1) * 25 + i * 5 + j]" expression="&#52572;&#45800;&#44221;&#47196;"/>
+                    </for>
+                </for>
+            </for>
+        </body>
+    </function>
+    <function name="min" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <if expression="a &lt;= b">
+                <then>
+                    <assign variable="&#44208;&#44284;" expression="a"/>
+                </then>
+                <else>
+                    <assign variable="&#44208;&#44284;" expression="b"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

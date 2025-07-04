@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Area of a Circle"/>
+        <attribute name="authors" value="Devin Cook"/>
+        <attribute name="about" value="This example inputs the radius of a circle and outputs the area."/>
+        <attribute name="saved" value="2022-06-06 07:56:03 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDUtMjg7MTA6NTY6MzAg7Jik7KCEOzEwMzc5OQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMDY7MDc6NTY6MDMg7Jik7ZuEOzM7MTA3Njg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#45331;&#51060;" type="Real" array="False" size=""/>
+            <declare name="&#48152;&#51648;&#47492;" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#50896;&#51032; &#48152;&#51648;&#47492;&#51012; &#51077;&#47141;&#54644; &#51452;&#49464;&#50836;.&quot;" newline="True"/>
+            <input variable="&#48152;&#51648;&#47492;"/>
+            <assign variable="&#45331;&#51060;" expression="pi * &#48152;&#51648;&#47492; ^ 2"/>
+            <output expression="&quot;&#45331;&#51060;&#45716; &quot; &amp; &#45331;&#51060; &amp; &quot;&#51077;&#45768;&#45796;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

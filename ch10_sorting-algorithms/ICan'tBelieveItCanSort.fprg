@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-12 12:05:03 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTY7MTE6NDc6NDAg7Jik7ZuEOzEwNzU3NQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTY7MTE6NTI6Mjgg7Jik7ZuEOzE7eW9uZztPTUVOOzIwMjItMDYtMTQ7MDI6NTU6NTQg7Jik7KCEO+yCveyeheygleugrDMuZnByZzs0MTA5MTk="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjMtMDgtMTI7MTI6MDU6MDMg7Jik7KCEOzk7MTAzOTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="4"/>
+            <assign variable="A[0]" expression="1"/>
+            <assign variable="A[1]" expression="2"/>
+            <assign variable="A[2]" expression="3"/>
+            <assign variable="A[3]" expression="4"/>
+            <call expression="&#51060;&#44172;&#51221;&#47148;&#51060;&#46108;&#45796;&#45768;&#48127;&#51012;&#49688;&#50630;&#50612;(A)"/>
+        </body>
+    </function>
+    <function name="&#51060;&#44172;&#51221;&#47148;&#51060;&#46108;&#45796;&#45768;&#48127;&#51012;&#49688;&#50630;&#50612;" type="None" variable="">
+        <parameters>
+            <parameter name="A" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="&#51076;&#49884;" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="size(A) - 1" direction="inc" step="1">
+                <for variable="j" start="0" end="size(A) - 1" direction="inc" step="1">
+                    <if expression="A[i] &lt; A[j]">
+                        <then>
+                            <assign variable="&#51076;&#49884;" expression="A[i]"/>
+                            <assign variable="A[i]" expression="A[j]"/>
+                            <assign variable="A[j]" expression="&#51076;&#49884;"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

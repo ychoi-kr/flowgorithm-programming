@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-31 06:56:04 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDU6MjQ6MDkg7Jik7ZuEOzEwNzU3Nw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDY6NTY6MDQg7Jik7ZuEOzU7MTA3Njkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s" type="String" array="False" size=""/>
+            <assign variable="s" expression="&quot;&#50500;&#48260;&#51648;&#44032; &#48169;&#50640; &#46308;&#50612;&#44032;&#49888;&#45796;&quot;"/>
+            <declare name="del" type="String" array="False" size=""/>
+            <assign variable="del" expression="&quot; &quot;"/>
+            <declare name="a" type="String" array="True" size="3"/>
+            <declare name="sindex" type="Integer" array="False" size=""/>
+            <declare name="buf" type="String" array="False" size=""/>
+            <assign variable="buf" expression="&quot;&quot;"/>
+            <declare name="aindex" type="Integer" array="False" size=""/>
+            <assign variable="aindex" expression="0"/>
+            <for variable="sindex" start="0" end="Len(s) - 1" direction="inc" step="1">
+                <if expression="Char(s, sindex) != del">
+                    <then>
+                        <assign variable="buf" expression="buf &amp; Char(s, sindex)"/>
+                    </then>
+                    <else>
+                        <if expression="buf != &quot;&quot;">
+                            <then>
+                                <assign variable="a[aindex]" expression="buf"/>
+                                <assign variable="buf" expression="&quot;&quot;"/>
+                                <assign variable="aindex" expression="aindex + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <if expression="buf != &quot;&quot;">
+                <then>
+                    <assign variable="a[aindex]" expression="buf"/>
+                </then>
+                <else/>
+            </if>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="size(a) - 1" direction="inc" step="1">
+                <output expression="&quot;a[&quot; &amp; i &amp; &quot;]:&quot; &amp; a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

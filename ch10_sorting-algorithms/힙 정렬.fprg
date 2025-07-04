@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-16 12:32:00 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTU7MDU6MjI6MDcg7Jik7ZuEOzEwNzU3Mw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTY7MTI6MzI6MDAg7Jik7KCEOzE7MTAzODk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&#48512;&#47784;(2)" newline="True"/>
+        </body>
+    </function>
+    <function name="&#48512;&#47784;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="(i / 2) + 1"/>
+        </body>
+    </function>
+    <function name="&#50812;&#51901;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="2 * i + 1"/>
+        </body>
+    </function>
+    <function name="&#50724;&#47480;&#51901;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="2 * (i + 1)"/>
+        </body>
+    </function>
+</flowgorithm>

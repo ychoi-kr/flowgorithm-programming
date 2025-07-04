@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-25 01:56:07 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMjI7MDY6NDc6MjMg7Jik7ZuEOzEwNzU3Nw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMjI7MDk6MDA6NTkg7Jik7ZuEOzE7eW9uZztPTUVOOzIwMjItMDYtMjI7MDY6NDc6MjMg7Jik7ZuEO+2BkC5mcHJnOzI2OTE4Ng=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMjU7MDE6NTY6MDcg7Jik7ZuEOzM5OzEwNzc0NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Q" type="Integer" array="True" size="12"/>
+            <declare name="end" type="Integer" array="True" size="2"/>
+            <comment text="head"/>
+            <assign variable="end[0]" expression="6"/>
+            <comment text="tail"/>
+            <assign variable="end[1]" expression="6"/>
+            <call expression="Enqueue(Q, end, 15)"/>
+            <call expression="Enqueue(Q, end, 6)"/>
+            <call expression="Enqueue(Q, end, 9)"/>
+            <call expression="Enqueue(Q, end, 8)"/>
+            <call expression="Enqueue(Q, end, 4)"/>
+            <call expression="&#53328;&#52636;&#47141;(Q, end)"/>
+            <breakpoint/>
+            <call expression="Enqueue(Q, end, 17)"/>
+            <call expression="Enqueue(Q, end, 3)"/>
+            <call expression="Enqueue(Q, end, 5)"/>
+            <call expression="&#53328;&#52636;&#47141;(Q, end)"/>
+            <breakpoint/>
+            <call expression="Dequeue(Q, end)"/>
+            <call expression="&#53328;&#52636;&#47141;(Q, end)"/>
+        </body>
+    </function>
+    <function name="Dequeue" type="None" variable="">
+        <parameters>
+            <parameter name="Q" type="Integer" array="True"/>
+            <parameter name="end" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Dequeue&quot;" newline="True"/>
+            <declare name="head" type="Integer" array="False" size=""/>
+            <assign variable="head" expression="end[0]"/>
+            <if expression="head == Size(Q) - 1">
+                <then>
+                    <assign variable="head" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="head" expression="head + 1"/>
+                </else>
+            </if>
+            <assign variable="end[0]" expression="head"/>
+        </body>
+    </function>
+    <function name="Enqueue" type="None" variable="">
+        <parameters>
+            <parameter name="Q" type="Integer" array="True"/>
+            <parameter name="end" type="Integer" array="True"/>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Enqueue &quot; &amp; x" newline="True"/>
+            <declare name="tail" type="Integer" array="False" size=""/>
+            <assign variable="tail" expression="end[1]"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <assign variable="end[1]" expression="tail"/>
+        </body>
+    </function>
+    <function name="&#53328;&#52636;&#47141;" type="None" variable="">
+        <parameters>
+            <parameter name="Q" type="Integer" array="True"/>
+            <parameter name="end" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="head" type="Integer" array="False" size=""/>
+            <declare name="tail" type="Integer" array="False" size=""/>
+            <assign variable="head" expression="end[0]"/>
+            <assign variable="tail" expression="end[1]"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="s" type="String" array="False" size=""/>
+            <assign variable="s" expression="&quot;&quot;"/>
+            <if expression="head &lt;= tail">
+                <then>
+                    <for variable="i" start="head" end="tail - 1" direction="inc" step="1">
+                        <assign variable="s" expression="s &amp; ToString(Q[i]) &amp; &quot; &quot;"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="head" end="Size(Q) - 1" direction="inc" step="1">
+                        <assign variable="s" expression="s &amp; ToString(Q[i]) &amp; &quot; &quot;"/>
+                    </for>
+                    <for variable="i" start="0" end="tail - 1" direction="inc" step="1">
+                        <assign variable="s" expression="s &amp; ToString(Q[i]) &amp; &quot; &quot;"/>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;&#53328;: &quot; &amp; s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

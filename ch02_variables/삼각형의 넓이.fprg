@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Example Triangle"/>
+        <attribute name="authors" value="Devin Cook"/>
+        <attribute name="about" value="This is very basic program that inputs the base and height of a right-angled triangle."/>
+        <attribute name="saved" value="2022-06-04 01:30:23 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDUtMjg7MTE6MTQ6MTQg7Jik7KCEOzEwMzc5Ng=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMDQ7MDE6MzA6MjMg7Jik7ZuEOzI7MTA3Njcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#48145;&#48320;" type="Real" array="False" size=""/>
+            <declare name="&#45458;&#51060;" type="Real" array="False" size=""/>
+            <declare name="&#45813;" type="Real" array="False" size=""/>
+            <output expression="&quot;&#49340;&#44033;&#54805;&#51032; &#48145;&#48320; &#44600;&#51060;&#44032; &#50620;&#47560;&#51064;&#44032;&#50836;?&quot;" newline="True"/>
+            <input variable="&#48145;&#48320;"/>
+            <output expression="&quot;&#45458;&#51060;&#45716; &#50620;&#47560;&#51064;&#44032;&#50836;?&quot;" newline="True"/>
+            <input variable="&#45458;&#51060;"/>
+            <assign variable="&#45813;" expression="1 / 2 * (&#48145;&#48320; * &#45458;&#51060;)"/>
+            <output expression="&quot;&#49340;&#44033;&#54805;&#51032; &#45331;&#51060;&#45716; &quot; &amp; &#45813; &amp; &quot;&#51077;&#45768;&#45796;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

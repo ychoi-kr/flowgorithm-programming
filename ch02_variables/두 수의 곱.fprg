@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-02 06:19:26 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMDI7MDY6MDk6MDkg7Jik7ZuEOzEwNzU3Nw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMDI7MDY6MTk6MjYg7Jik7ZuEOzE7MTA3Njg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <output expression="&quot;&#46160; &#49688;&#51032; &#44273;&#51008; &quot; &amp; a * b &amp; &quot;&#51077;&#45768;&#45796;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

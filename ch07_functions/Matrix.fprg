@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-15 08:51:20 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOMzA7MjAyNC0wNS0xNTswNjo0MjoyOCDsmKTsoIQ7MTAzOTAz"/>
+        <attribute name="edited" value="eW9uZztPTUVOMzA7MjAyNC0wNS0xNTswODo1MToyMCDsmKTsoIQ7MjA7MTA0MDU0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <assign variable="m" expression="3"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="4"/>
+            <declare name="arr" type="Integer" array="True" size="m * n"/>
+            <declare name="val" type="String" array="False" size=""/>
+            <assign variable="val" expression="&quot;5,7,2,-2;3,0,4,8;-1,28,6,9;&quot;"/>
+            <call expression="loadMatrix(m, n, arr, val)"/>
+        </body>
+    </function>
+    <function name="LoadMatrix" type="None" variable="">
+        <parameters>
+            <parameter name="m" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+            <parameter name="arr" type="Integer" array="True"/>
+            <parameter name="val" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
+            <declare name="str" type="String" array="False" size=""/>
+            <assign variable="str" expression="&quot;&quot;"/>
+            <for variable="x" start="0" end="len(val) - 1" direction="inc" step="1">
+                <if expression="x &gt; 0">
+                    <then>
+                        <if expression="Char(val, x) != &quot;;&quot;">
+                            <then>
+                                <if expression="Char(val, x) != &quot;,&quot;">
+                                    <then>
+                                        <assign variable="str" expression="str &amp; Char(val, x)"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="arr[i * n + j - 1]" expression="ToInteger(str)"/>
+                                        <output expression="&quot;arr[&quot; &amp; i * n + j - 1 &amp; &quot;] = &quot; &amp; str" newline="True"/>
+                                        <assign variable="str" expression="&quot;&quot;"/>
+                                        <assign variable="j" expression="j + 1"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <assign variable="arr[i * n + j - 1]" expression="ToInteger(str)"/>
+                                <output expression="&quot;arr[&quot; &amp; i * n + j - 1 &amp; &quot;] = &quot; &amp; str" newline="True"/>
+                                <assign variable="str" expression="&quot;&quot;"/>
+                                <assign variable="j" expression="j + 1"/>
+                                <assign variable="i" expression="0"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="str" expression="Char(val, x)"/>
+                        <assign variable="j" expression="1"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

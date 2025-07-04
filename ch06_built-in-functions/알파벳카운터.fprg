@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-12 09:14:42 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MDg6MDE6MTkg7Jik7ZuEOzEwNzU3Mw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MDk6MTQ6NDIg7Jik7ZuEOzM7MTA3Njg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s" type="String" array="False" size=""/>
+            <input variable="s"/>
+            <declare name="counter" type="Integer" array="True" size="26"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="25" direction="inc" step="1">
+                <assign variable="counter[i]" expression="0"/>
+            </for>
+            <declare name="c" type="String" array="False" size=""/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="ToCode(&quot;a&quot;)"/>
+            <for variable="i" start="0" end="len(s) - 1" direction="inc" step="1">
+                <assign variable="c" expression="Char(s, i)"/>
+                <assign variable="counter[ToCode(c) - a]" expression="counter[ToCode(c) - a] + 1"/>
+            </for>
+            <for variable="i" start="0" end="25" direction="inc" step="1">
+                <if expression="counter[i] &gt; 0">
+                    <then>
+                        <output expression="ToChar(i + a) &amp; &quot;: &quot; &amp; counter[i]" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

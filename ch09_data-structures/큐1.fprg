@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-22 09:15:57 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMjI7MDY6NDc6MjMg7Jik7ZuEOzEwNzU3Nw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMjI7MDk6MDA6NTkg7Jik7ZuEOzE7eW9uZztPTUVOOzIwMjItMDYtMjI7MDY6NDc6MjMg7Jik7ZuEO+2BkC5mcHJnOzI2OTE4Ng=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMjI7MDk6MTU6NTcg7Jik7ZuEOzI5OzEwNzc0OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Q" type="Integer" array="True" size="12"/>
+            <declare name="head" type="Integer" array="False" size=""/>
+            <declare name="tail" type="Integer" array="False" size=""/>
+            <assign variable="head" expression="6"/>
+            <assign variable="tail" expression="6"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enqueue(Q, 15)&quot;" newline="True"/>
+            <assign variable="x" expression="15"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <output expression="&quot;Enqueue(Q, 6)&quot;" newline="True"/>
+            <assign variable="x" expression="6"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <output expression="&quot;Enqueue(Q, 9)&quot;" newline="True"/>
+            <assign variable="x" expression="9"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <output expression="&quot;Enqueue(Q, 8)&quot;" newline="True"/>
+            <assign variable="x" expression="8"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <output expression="&quot;Enqueue(Q, 4)&quot;" newline="True"/>
+            <assign variable="x" expression="4"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <call expression="&#53328;&#52636;&#47141;(Q, head, tail)"/>
+            <breakpoint/>
+            <output expression="&quot;Enqueue(Q, 17)&quot;" newline="True"/>
+            <assign variable="x" expression="17"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <output expression="&quot;Enqueue(Q, 3)&quot;" newline="True"/>
+            <assign variable="x" expression="3"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <output expression="&quot;Enqueue(Q, 5)&quot;" newline="True"/>
+            <assign variable="x" expression="5"/>
+            <assign variable="Q[tail]" expression="x"/>
+            <if expression="tail == Size(Q) - 1">
+                <then>
+                    <assign variable="tail" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="tail" expression="tail + 1"/>
+                </else>
+            </if>
+            <call expression="&#53328;&#52636;&#47141;(Q, head, tail)"/>
+            <breakpoint/>
+            <output expression="&quot;Dequeue(Q)&quot;" newline="True"/>
+            <assign variable="x" expression="Q[head]"/>
+            <if expression="head == Size(Q) - 1">
+                <then>
+                    <assign variable="head" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="head" expression="head + 1"/>
+                </else>
+            </if>
+            <call expression="&#53328;&#52636;&#47141;(Q, head, tail)"/>
+        </body>
+    </function>
+    <function name="&#53328;&#52636;&#47141;" type="None" variable="">
+        <parameters>
+            <parameter name="Q" type="Integer" array="True"/>
+            <parameter name="head" type="Integer" array="False"/>
+            <parameter name="tail" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="s" type="String" array="False" size=""/>
+            <assign variable="s" expression="&quot;&quot;"/>
+            <if expression="head &lt;= tail">
+                <then>
+                    <for variable="i" start="head" end="tail - 1" direction="inc" step="1">
+                        <assign variable="s" expression="s &amp; ToString(Q[i]) &amp; &quot; &quot;"/>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="head" end="Size(Q) - 1" direction="inc" step="1">
+                        <assign variable="s" expression="s &amp; ToString(Q[i]) &amp; &quot; &quot;"/>
+                    </for>
+                    <for variable="i" start="0" end="tail - 1" direction="inc" step="1">
+                        <assign variable="s" expression="s &amp; ToString(Q[i]) &amp; &quot; &quot;"/>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;&#53328;: &quot; &amp; s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

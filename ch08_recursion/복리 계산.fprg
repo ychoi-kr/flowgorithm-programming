@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-07-02 10:25:33 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDctMDI7MDk6NDQ6MTcg7Jik7KCEOzEwMzgwMw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDctMDI7MTA6MjU6MzMg7Jik7KCEOzM7MTAzOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#50896;&#44552;" type="Integer" array="False" size=""/>
+            <declare name="&#51060;&#50984;" type="Real" array="False" size=""/>
+            <declare name="&#44592;&#44036;" type="Integer" array="False" size=""/>
+            <declare name="&#50896;&#47532;&#44552;" type="Integer" array="False" size=""/>
+            <input variable="&#50896;&#44552;"/>
+            <input variable="&#51060;&#50984;"/>
+            <input variable="&#44592;&#44036;"/>
+            <output expression="&#48373;&#47532;(&#50896;&#44552;, &#51060;&#50984;, &#44592;&#44036;)" newline="True"/>
+        </body>
+    </function>
+    <function name="&#48373;&#47532;" type="Real" variable="&#44552;&#50529;">
+        <parameters>
+            <parameter name="&#44552;&#50529;" type="Real" array="False"/>
+            <parameter name="&#51060;&#50984;" type="Real" array="False"/>
+            <parameter name="&#44592;&#44036;" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="&#44592;&#44036; &gt; 0">
+                <then>
+                    <assign variable="&#44552;&#50529;" expression="&#48373;&#47532;(&#44552;&#50529;, &#51060;&#50984;, &#44592;&#44036; - 1) * (1 + &#51060;&#50984;)"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-06 09:14:50 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMDY7MDg6NTI6Mjkg7Jik7KCEOzEwMzgwNw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMDY7MDk6MTQ6NTAg7Jik7KCEOzQ7MTAzOTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="Random(9) + 1"/>
+            <assign variable="b" expression="Random(9) + 1"/>
+            <output expression="a &amp; &quot; &#44273;&#54616;&#44592; &quot; &amp; b &amp; &quot;?&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

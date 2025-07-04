@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-18 09:58:44 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTg7MTA6Mzc6NDAg7Jik7KCEOzEwMzc5OQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTg7MTA6Mzk6MTYg7Jik7KCEOzE7eW9uZztPTUVOOzIwMjItMDYtMTc7MDM6NTc6NDIg7Jik7KCEO+yEoO2DnSDsoJXroKxfc3dhcC5mcHJnOzQxMDE1OQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTg7MDk6NTg6NDQg7Jik7ZuEOzY3OzEwNzc1OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#44600;&#51060;" type="Integer" array="False" size=""/>
+            <assign variable="&#44600;&#51060;" expression="12"/>
+            <declare name="A" type="Integer" array="True" size="&#44600;&#51060;"/>
+            <assign variable="A[0]" expression="62"/>
+            <assign variable="A[1]" expression="83"/>
+            <assign variable="A[2]" expression="18"/>
+            <assign variable="A[3]" expression="53"/>
+            <assign variable="A[4]" expression="7"/>
+            <assign variable="A[5]" expression="17"/>
+            <assign variable="A[6]" expression="95"/>
+            <assign variable="A[7]" expression="86"/>
+            <assign variable="A[8]" expression="47"/>
+            <assign variable="A[9]" expression="69"/>
+            <assign variable="A[10]" expression="25"/>
+            <assign variable="A[11]" expression="28"/>
+            <breakpoint/>
+            <call expression="&#49528;&#51221;&#47148;(A)"/>
+        </body>
+    </function>
+    <function name="&#49528;&#51221;&#47148;" type="None" variable="">
+        <parameters>
+            <parameter name="A" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="&#51076;&#49884;" type="Integer" array="False" size=""/>
+            <declare name="gaps" type="Integer" array="True" size="3"/>
+            <assign variable="gaps[0]" expression="1"/>
+            <assign variable="gaps[1]" expression="3"/>
+            <assign variable="gaps[2]" expression="5"/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <declare name="&#44036;&#44201;" type="Integer" array="False" size=""/>
+            <for variable="k" start="Size(gaps) - 1" end="0" direction="dec" step="1">
+                <assign variable="&#44036;&#44201;" expression="gaps[k]"/>
+                <for variable="i" start="&#44036;&#44201;" end="Size(A) - 1" direction="inc" step="1">
+                    <assign variable="&#51076;&#49884;" expression="A[i]"/>
+                    <assign variable="j" expression="i"/>
+                    <declare name="&#51312;&#44148;" type="Boolean" array="False" size=""/>
+                    <if expression="j - &#44036;&#44201; &gt;= 0">
+                        <then>
+                            <if expression="a[j - &#44036;&#44201;] &gt; &#51076;&#49884;">
+                                <then>
+                                    <assign variable="&#51312;&#44148;" expression="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="&#51312;&#44148;" expression="False"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="&#51312;&#44148;" expression="False"/>
+                        </else>
+                    </if>
+                    <while expression="&#51312;&#44148;">
+                        <assign variable="A[j]" expression="a[j - &#44036;&#44201;]"/>
+                        <assign variable="j" expression="j - &#44036;&#44201;"/>
+                        <if expression="j - &#44036;&#44201; &gt;= 0">
+                            <then>
+                                <if expression="a[j - &#44036;&#44201;] &gt; &#51076;&#49884;">
+                                    <then>
+                                        <assign variable="&#51312;&#44148;" expression="True"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="&#51312;&#44148;" expression="False"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <assign variable="&#51312;&#44148;" expression="False"/>
+                            </else>
+                        </if>
+                    </while>
+                    <assign variable="A[j]" expression="&#51076;&#49884;"/>
+                </for>
+                <breakpoint/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

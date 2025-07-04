@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-06 09:58:11 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMDQ7MDY6MTU6NDQg7Jik7KCEOzEwMzc5OQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMDY7MDk6NTg6MTEg7Jik7KCEOzc7MTAzOTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#49884;&#51089;" type="Integer" array="False" size=""/>
+            <declare name="&#45149;" type="Integer" array="False" size=""/>
+            <declare name="&#54633;" type="Integer" array="False" size=""/>
+            <assign variable="&#49884;&#51089;" expression="1"/>
+            <assign variable="&#45149;" expression="10"/>
+            <assign variable="&#54633;" expression="0"/>
+            <declare name="&#51221;&#49688;" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+</flowgorithm>

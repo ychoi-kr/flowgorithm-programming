@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-14 03:41:01 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTQ7MDI6NTU6NTQg7Jik7KCEOzEwMzgwMQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTQ7MDM6NDE6MDEg7Jik7KCEOzQ7MTAzOTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="6"/>
+            <assign variable="A[0]" expression="5"/>
+            <assign variable="A[1]" expression="2"/>
+            <assign variable="A[2]" expression="4"/>
+            <assign variable="A[3]" expression="6"/>
+            <assign variable="A[4]" expression="1"/>
+            <assign variable="A[5]" expression="3"/>
+            <declare name="&#53412;" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <for variable="j" start="1" end="Size(A) - 1" direction="inc" step="1">
+                <assign variable="&#53412;" expression="A[j]"/>
+                <assign variable="i" expression="j - 1"/>
+                <declare name="&#44228;&#49549;" type="Boolean" array="False" size=""/>
+                <if expression="A[i] &gt; &#53412;">
+                    <then>
+                        <assign variable="&#44228;&#49549;" expression="True"/>
+                    </then>
+                    <else>
+                        <assign variable="&#44228;&#49549;" expression="False"/>
+                    </else>
+                </if>
+                <while expression="&#44228;&#49549;">
+                    <assign variable="A[i + 1]" expression="A[i]"/>
+                    <assign variable="i" expression="i - 1"/>
+                    <if expression="i &gt;= 0">
+                        <then>
+                            <if expression="A[i] &gt; &#53412;">
+                                <then>
+                                    <assign variable="&#44228;&#49549;" expression="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="&#44228;&#49549;" expression="False"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="&#44228;&#49549;" expression="False"/>
+                        </else>
+                    </if>
+                </while>
+                <assign variable="A[i + 1]" expression="&#53412;"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

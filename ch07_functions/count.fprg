@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-31 08:55:16 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDg6NTA6Mzkg7Jik7ZuEOzEwNzU4Mg=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDg6NTE6MDMg7Jik7ZuEOzE7eW9uZztPTUVOOzIwMjItMDgtMzE7MDU6MTI6NDcg7Jik7ZuEO1JQTl/rr7jsmYTshLEuZnByZzszNjQ1MjE="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDg6NTU6MTYg7Jik7ZuEOzE7MTA3Njkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="str" type="String" array="False" size=""/>
+            <assign variable="str" expression="&quot;banana&quot;"/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <assign variable="ch" expression="&quot;a&quot;"/>
+            <output expression="str &amp; &quot;&#50640;&#45716; &quot; &amp; ch &amp; &quot;&#44032; &quot; &amp; count(str, ch) &amp; &quot;&#44060; &#51080;&#50612;&#50836;.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="count" type="Integer" variable="result">
+        <parameters>
+            <parameter name="str" type="String" array="False"/>
+            <parameter name="ch" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="len(str) - 1" direction="inc" step="1">
+                <if expression="Char(str, i) == ch">
+                    <then>
+                        <assign variable="result" expression="result + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

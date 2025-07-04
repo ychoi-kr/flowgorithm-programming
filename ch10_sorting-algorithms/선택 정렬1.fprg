@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-17 08:27:28 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTc7MDM6NTc6NDIg7Jik7KCEOzEwMzgwNA=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTc7MDY6NDE6MTgg7Jik7ZuEOzE7eW9uZztPTUVOOzIwMjItMDYtMTQ7MDI6NTU6NTQg7Jik7KCEO+yCveyeheygleugrDMuZnByZzs0MTA5MjE="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTc7MDg6Mjc6Mjgg7Jik7ZuEOzc7MTA3NzAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="8"/>
+            <assign variable="A[0]" expression="9"/>
+            <assign variable="A[1]" expression="1"/>
+            <assign variable="A[2]" expression="6"/>
+            <assign variable="A[3]" expression="8"/>
+            <assign variable="A[4]" expression="4"/>
+            <assign variable="A[5]" expression="3"/>
+            <assign variable="A[6]" expression="2"/>
+            <assign variable="A[7]" expression="0"/>
+            <call expression="&#49440;&#53469;&#51221;&#47148;(A)"/>
+        </body>
+    </function>
+    <function name="&#49440;&#53469;&#51221;&#47148;" type="None" variable="">
+        <parameters>
+            <parameter name="A" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="indexMin" type="Integer" array="False" size=""/>
+            <declare name="&#51076;&#49884;" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="size(A) - 2" direction="inc" step="1">
+                <assign variable="indexMin" expression="i"/>
+                <for variable="j" start="i + 1" end="size(A) -1" direction="inc" step="1">
+                    <if expression="A[j] &lt; A[indexMin]">
+                        <then>
+                            <assign variable="indexMin" expression="j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <assign variable="&#51076;&#49884;" expression="A[indexMin]"/>
+                <assign variable="A[indexMin]" expression="A[i]"/>
+                <assign variable="A[i]" expression="&#51076;&#49884;"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

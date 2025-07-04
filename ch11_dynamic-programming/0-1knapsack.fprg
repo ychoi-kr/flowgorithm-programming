@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-10 01:35:17 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOMzA7MjAyNC0wNS0wOTsxMDo1OToyMyDsmKTtm4Q7MTA3Njgw"/>
+        <attribute name="edited" value="eW9uZztPTUVOMzA7MjAyNC0wNS0xMDswMTozNToxNyDsmKTsoIQ7MTk7MTA0MDU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="n: number of items"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="3"/>
+            <comment text="C: knapsack capacity"/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <assign variable="C" expression="8"/>
+            <comment text="w: weight"/>
+            <declare name="w" type="Integer" array="True" size="n"/>
+            <assign variable="w[0]" expression="3"/>
+            <assign variable="w[1]" expression="4"/>
+            <assign variable="w[2]" expression="5"/>
+            <comment text="v: value"/>
+            <declare name="v" type="Integer" array="True" size="n"/>
+            <assign variable="v[0]" expression="30"/>
+            <assign variable="v[1]" expression="50"/>
+            <assign variable="v[2]" expression="60"/>
+            <comment text="K: partial problem"/>
+            <declare name="K" type="Integer" array="True" size="(n + 1) * (C + 1)"/>
+            <comment text="i: item"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="cw: current weight"/>
+            <declare name="cw" type="Integer" array="False" size=""/>
+            <comment text="Initialize the table: for all items, if the capacity is 0, the maximum value is always 0."/>
+            <for variable="i" start="0" end="n" direction="inc" step="1">
+                <assign variable="K[i * (C + 1)]" expression="0"/>
+            </for>
+            <comment text="# Initialize the table: with item index 0 (no items considered), maximum value is 0 for any capacity."/>
+            <for variable="cw" start="0" end="C" direction="inc" step="1">
+                <assign variable="K[cw]" expression="0"/>
+            </for>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <for variable="cw" start="1" end="C" direction="inc" step="1">
+                    <comment text="Check if the current item's weight exceeds the current capacity"/>
+                    <if expression="w[i - 1] &gt; cw">
+                        <then>
+                            <comment text="Current item cannot be included."/>
+                            <assign variable="K[i * (C + 1) + cw]" expression="K[(i -1) * (C + 1) + cw]"/>
+                        </then>
+                        <else>
+                            <comment text="Choose the maximum of including or excluding the current item."/>
+                            <assign variable="K[i * (C + 1) + cw]" expression="max(K[(i - 1) * (C + 1) + cw], K[(i - 1) * (C + 1) + (cw - w[i - 1])] + v[i - 1])"/>
+                        </else>
+                    </if>
+                </for>
+            </for>
+            <output expression="K[(n + 1) * (C + 1) - 1]" newline="True"/>
+        </body>
+    </function>
+    <function name="max" type="Integer" variable="result">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <if expression="a &gt;= b">
+                <then>
+                    <assign variable="result" expression="a"/>
+                </then>
+                <else>
+                    <assign variable="result" expression="b"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

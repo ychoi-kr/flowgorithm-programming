@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-31 10:06:33 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDU6MTI6NDcg7Jik7ZuEOzEwNzU3Ng=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDU6MTQ6MDMg7Jik7ZuEOzE7eW9uZztPTUVOOzIwMjItMDYtMTk7MDM6MjI6NDYg7Jik7ZuEO+yKpO2DnS5mcHJnOzMxOTE0OA=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MDc6MjE6Mjkg7Jik7ZuEOzE7eW9uZztPTUVOOzIwMjItMDgtMzE7MDU6MjQ6MDkg7Jik7ZuEO3NwbGl0X2Z1bmN0aW9uLmZwcmc7MjE3Mzc5"/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDgtMzE7MTA6MDY6MzMg7Jik7ZuEOzU7MTA3Njgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="exp" type="String" array="False" size=""/>
+            <assign variable="exp" expression="&quot;3 5 + 4 2 + *&quot;"/>
+            <declare name="expsize" type="Integer" array="False" size=""/>
+            <assign variable="expsize" expression="count(exp, &quot; &quot;) + 1"/>
+            <declare name="op" type="String" array="True" size="expsize"/>
+            <call expression="split(exp, op)"/>
+            <declare name="x" type="String" array="False" size=""/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="stack" type="Integer" array="True" size="10"/>
+            <declare name="top" type="Integer" array="False" size=""/>
+            <assign variable="top" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="expsize - 1" direction="inc" step="1">
+                <assign variable="x" expression="op[i]"/>
+                <if expression="x != &quot;+&quot; &amp;&amp; x != &quot;-&quot; &amp;&amp; x != &quot;*&quot; &amp;&amp; x != &quot;/&quot;">
+                    <then>
+                        <assign variable="stack[top]" expression="ToInteger(x)"/>
+                        <assign variable="top" expression="top + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="top" expression="top - 1"/>
+                        <assign variable="b" expression="stack[top]"/>
+                        <assign variable="top" expression="top - 1"/>
+                        <assign variable="a" expression="stack[top]"/>
+                        <if expression="x == &quot;+&quot;">
+                            <then>
+                                <assign variable="stack[top]" expression="a + b"/>
+                                <assign variable="top" expression="top + 1"/>
+                            </then>
+                            <else>
+                                <if expression="x == &quot;-&quot;">
+                                    <then>
+                                        <assign variable="stack[top]" expression="a - b"/>
+                                        <assign variable="top" expression="top + 1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="x == &quot;*&quot;">
+                                            <then>
+                                                <assign variable="stack[top]" expression="a * b"/>
+                                                <assign variable="top" expression="top + 1"/>
+                                            </then>
+                                            <else>
+                                                <if expression="x == &quot;/&quot;">
+                                                    <then>
+                                                        <assign variable="stack[top]" expression="a / b"/>
+                                                        <assign variable="top" expression="top + 1"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <assign variable="top" expression="top - 1"/>
+            <output expression="&quot;&#44208;&#44284;:&quot; &amp; stack[top]" newline="True"/>
+        </body>
+    </function>
+    <function name="count" type="Integer" variable="result">
+        <parameters>
+            <parameter name="str" type="String" array="False"/>
+            <parameter name="ch" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="result" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="len(str) - 1" direction="inc" step="1">
+                <if expression="Char(str, i) == ch">
+                    <then>
+                        <assign variable="result" expression="result + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="split" type="None" variable="">
+        <parameters>
+            <parameter name="s" type="String" array="False"/>
+            <parameter name="a" type="String" array="True"/>
+        </parameters>
+        <body>
+            <declare name="del" type="String" array="False" size=""/>
+            <assign variable="del" expression="&quot; &quot;"/>
+            <declare name="sindex" type="Integer" array="False" size=""/>
+            <declare name="buf" type="String" array="False" size=""/>
+            <assign variable="buf" expression="&quot;&quot;"/>
+            <declare name="aindex" type="Integer" array="False" size=""/>
+            <assign variable="aindex" expression="0"/>
+            <for variable="sindex" start="0" end="Len(s) - 1" direction="inc" step="1">
+                <if expression="Char(s, sindex) != del">
+                    <then>
+                        <assign variable="buf" expression="buf &amp; Char(s, sindex)"/>
+                    </then>
+                    <else>
+                        <if expression="buf != &quot;&quot;">
+                            <then>
+                                <assign variable="a[aindex]" expression="buf"/>
+                                <assign variable="buf" expression="&quot;&quot;"/>
+                                <assign variable="aindex" expression="aindex + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <if expression="buf != &quot;&quot;">
+                <then>
+                    <assign variable="a[aindex]" expression="buf"/>
+                </then>
+                <else>
+                    <assign variable="aindex" expression="aindex - 1"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

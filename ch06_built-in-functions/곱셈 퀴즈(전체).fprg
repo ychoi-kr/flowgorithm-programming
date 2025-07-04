@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-06 09:24:18 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMDY7MDg6NTI6Mjkg7Jik7KCEOzEwMzgwNw=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMDY7MDk6MjQ6MTgg7Jik7KCEOzI7MTAzOTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="Random(9) + 1"/>
+            <assign variable="b" expression="Random(9) + 1"/>
+            <output expression="a &amp; &quot; &#44273;&#54616;&#44592; &quot; &amp; b &amp; &quot;?&quot;" newline="True"/>
+            <declare name="&#44273;" type="Integer" array="False" size=""/>
+            <input variable="&#44273;"/>
+            <if expression="&#44273; == a * b">
+                <then>
+                    <output expression="&quot;&#46377;&#46041;&#45845;~&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#46433;!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

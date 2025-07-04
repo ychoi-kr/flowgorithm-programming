@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-12 10:13:44 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MDk6MjY6MDEg7Jik7ZuEOzEwNzU3Mg=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MTA6MTM6NDQg7Jik7ZuEOzc7MTA3Njgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#50508;&#54028;&#48307;" type="String" array="False" size=""/>
+            <input variable="&#50508;&#54028;&#48307;"/>
+            <declare name="&#52264;" type="Integer" array="False" size=""/>
+            <assign variable="&#52264;" expression="ToCode(&quot;a&quot;) - ToCode(&quot;A&quot;)"/>
+            <declare name="&#53076;&#46300;" type="Integer" array="False" size=""/>
+            <assign variable="&#53076;&#46300;" expression="ToCode(&#50508;&#54028;&#48307;)"/>
+            <if expression="&#53076;&#46300; &gt;= ToCode(&quot;A&quot;) &amp;&amp; &#53076;&#46300; &lt;= ToCode(&quot;Z&quot;)">
+                <then>
+                    <output expression="ToChar(ToCode(&#50508;&#54028;&#48307;) + &#52264;)" newline="True"/>
+                </then>
+                <else>
+                    <if expression="&#53076;&#46300; &gt;= ToCode(&quot;a&quot;) &amp;&amp; &#53076;&#46300; &lt;= ToCode(&quot;z&quot;)">
+                        <then>
+                            <output expression="ToChar(ToCode(&#50508;&#54028;&#48307;) - &#52264;)" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-18 10:30:06 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MDc6MTI6NTAg7Jik7ZuEOzEwNzU2OQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTg7MTA6MzA6MDYg7Jik7KCEOzg7MTAzOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="s" type="String" array="False" size=""/>
+            <input variable="s"/>
+            <declare name="&#44600;&#51060;" type="Integer" array="False" size=""/>
+            <assign variable="&#44600;&#51060;" expression="Len(s)"/>
+            <declare name="&#54924;&#47928;" type="Boolean" array="False" size=""/>
+            <assign variable="&#54924;&#47928;" expression="True"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="&#44600;&#51060; / 2" direction="inc" step="1">
+                <if expression="Char(s, i) != Char(s, &#44600;&#51060; - 1 - i)">
+                    <then>
+                        <assign variable="&#54924;&#47928;" expression="False"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="&#54924;&#47928;">
+                <then>
+                    <output expression="&quot;&#54924;&#47928;&#51077;&#45768;&#45796;.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#54924;&#47928;&#51060; &#50500;&#45785;&#45768;&#45796;.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

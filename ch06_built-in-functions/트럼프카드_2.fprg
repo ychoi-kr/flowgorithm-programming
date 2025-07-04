@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-13 12:20:41 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MTA6MzQ6NDIg7Jik7ZuEOzEwNzU2OA=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTM7MTI6MjA6NDEg7Jik7KCEOzE5OzEwMzk1NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#49707;&#51088;" type="String" array="True" size="13"/>
+            <assign variable="&#49707;&#51088;[0]" expression="&quot;2&quot;"/>
+            <assign variable="&#49707;&#51088;[1]" expression="&quot;3&quot;"/>
+            <assign variable="&#49707;&#51088;[2]" expression="&quot;4&quot;"/>
+            <assign variable="&#49707;&#51088;[3]" expression="&quot;5&quot;"/>
+            <assign variable="&#49707;&#51088;[4]" expression="&quot;6&quot;"/>
+            <assign variable="&#49707;&#51088;[5]" expression="&quot;7&quot;"/>
+            <assign variable="&#49707;&#51088;[6]" expression="&quot;8&quot;"/>
+            <assign variable="&#49707;&#51088;[7]" expression="&quot;9&quot;"/>
+            <assign variable="&#49707;&#51088;[8]" expression="&quot;T&quot;"/>
+            <assign variable="&#49707;&#51088;[9]" expression="&quot;J&quot;"/>
+            <assign variable="&#49707;&#51088;[10]" expression="&quot;Q&quot;"/>
+            <assign variable="&#49707;&#51088;[11]" expression="&quot;K&quot;"/>
+            <assign variable="&#49707;&#51088;[12]" expression="&quot;A&quot;"/>
+            <declare name="&#47924;&#45740;" type="String" array="True" size="4"/>
+            <assign variable="&#47924;&#45740;[0]" expression="&quot;S&quot;"/>
+            <assign variable="&#47924;&#45740;[1]" expression="&quot;C&quot;"/>
+            <assign variable="&#47924;&#45740;[2]" expression="&quot;D&quot;"/>
+            <assign variable="&#47924;&#45740;[3]" expression="&quot;H&quot;"/>
+            <declare name="&#51109;&#49688;" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#47751; &#51109;&#51012; &#48977;&#51012;&#44620;&#50836;?&quot;" newline="True"/>
+            <input variable="&#51109;&#49688;"/>
+            <declare name="&#54056;" type="String" array="True" size="&#51109;&#49688;"/>
+            <declare name="&#48977;&#44592;" type="String" array="False" size=""/>
+            <declare name="&#51473;&#48373;" type="Boolean" array="False" size=""/>
+            <assign variable="&#51473;&#48373;" expression="False"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="j" expression="0"/>
+            <while expression="i &lt; &#51109;&#49688;">
+                <assign variable="&#48977;&#44592;" expression="ToString(&#49707;&#51088;[Random(13)]) &amp; ToString(&#47924;&#45740;[Random(4)])"/>
+                <while expression="j &lt; i &amp;&amp; !&#51473;&#48373;">
+                    <if expression="&#54056;[j] == &#48977;&#44592;">
+                        <then>
+                            <assign variable="&#51473;&#48373;" expression="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="j" expression="j + 1"/>
+                </while>
+                <breakpoint/>
+                <if expression="!&#51473;&#48373;">
+                    <then>
+                        <assign variable="&#54056;[i]" expression="&#48977;&#44592;"/>
+                        <output expression="&#48977;&#44592;" newline="True"/>
+                        <assign variable="i" expression="i + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="&#51473;&#48373;" expression="False"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

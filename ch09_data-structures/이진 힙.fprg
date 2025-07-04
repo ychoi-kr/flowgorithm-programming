@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-19 02:04:19 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTk7MDE6NDA6Mzkg7Jik7ZuEOzEwNzU3OA=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTk7MDI6MDQ6MTkg7Jik7ZuEOzI2OzEwNzc0MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#55193;" type="Integer" array="True" size="10"/>
+            <assign variable="&#55193;[0]" expression="16"/>
+            <assign variable="&#55193;[1]" expression="14"/>
+            <assign variable="&#55193;[2]" expression="10"/>
+            <assign variable="&#55193;[3]" expression="8"/>
+            <assign variable="&#55193;[4]" expression="7"/>
+            <assign variable="&#55193;[5]" expression="9"/>
+            <assign variable="&#55193;[6]" expression="3"/>
+            <assign variable="&#55193;[7]" expression="2"/>
+            <assign variable="&#55193;[8]" expression="4"/>
+            <assign variable="&#55193;[9]" expression="1"/>
+            <output expression="&quot;&#44050; &quot; &amp; &#55193;[0] &amp; &quot;&#51032; &#50812;&#51901; &#51088;&#49885; &#44050;&#51008; &quot; &amp; &#55193;[&#51340;(0)] &amp; &quot;, &#50724;&#47480;&#51901; &#51088;&#49885; &#44050;&#51008; &quot; &amp; &#55193;[&#50864;(0)]" newline="True"/>
+            <output expression="&quot;&#44050; &quot; &amp; &#55193;[2] &amp; &quot;&#51032; &#48512;&#47784; &#44050;&#51008; &quot; &amp; &#55193;[&#48512;&#47784;(2)] &amp; &quot;, &#50812;&#51901; &#51088;&#49885; &#44050;&#51008; &quot; &amp; &#55193;[&#51340;(2)] &amp; &quot;, &#50724;&#47480;&#51901; &#51088;&#49885; &#44050;&#51008; &quot; &amp; &#55193;[&#50864;(2)]" newline="True"/>
+            <output expression="&quot;&#44050; &quot; &amp; &#55193;[4] &amp; &quot;&#51032; &#48512;&#47784; &#44050;&#51008; &quot; &amp; &#55193;[&#48512;&#47784;(4)] &amp; &quot;, &#50812;&#51901; &#51088;&#49885; &#44050;&#51008; &quot; &amp; &#55193;[&#51340;(4)]" newline="True"/>
+        </body>
+    </function>
+    <function name="&#48512;&#47784;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="(i - 1) / 2"/>
+        </body>
+    </function>
+    <function name="&#50864;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="2 * (i + 1)"/>
+        </body>
+    </function>
+    <function name="&#51340;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="2 * i + 1"/>
+        </body>
+    </function>
+</flowgorithm>

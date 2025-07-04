@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-11 10:27:35 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTE7MDk6NDc6MTcg7Jik7ZuEOzEwNzU4MQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTE7MTA6Mjc6MzUg7Jik7ZuEOzE7MTA3Njc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <output expression="&quot;n = &quot; &amp; n &amp; &quot;&#51068; &#46412; &#54588;&#48372;&#45208;&#52824; &#49688; Fn&#51008; &quot; &amp; &#54588;&#48372;&#45208;&#52824;(n)" newline="True"/>
+        </body>
+    </function>
+    <function name="&#54588;&#48372;&#45208;&#52824;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <if expression="n &lt;= 1">
+                <then>
+                    <assign variable="&#44208;&#44284;" expression="n"/>
+                </then>
+                <else>
+                    <assign variable="&#44208;&#44284;" expression="&#54588;&#48372;&#45208;&#52824;(n - 1) + &#54588;&#48372;&#45208;&#52824;(n - 2)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

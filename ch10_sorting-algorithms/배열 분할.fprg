@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-28 12:49:59 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOMzA7MjAyNC0wMy0yNzsxMTo0OTo1MiDsmKTtm4Q7MTA3Njgw"/>
+        <attribute name="edited" value="eW9uZztPTUVOMzA7MjAyNC0wMy0yODsxMjo0OTo1OSDsmKTsoIQ7MjM7MTA0MDcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="True" size="8"/>
+            <assign variable="A[0]" expression="2"/>
+            <assign variable="A[1]" expression="8"/>
+            <assign variable="A[2]" expression="7"/>
+            <assign variable="A[3]" expression="1"/>
+            <assign variable="A[4]" expression="3"/>
+            <assign variable="A[5]" expression="5"/>
+            <assign variable="A[6]" expression="6"/>
+            <assign variable="A[7]" expression="4"/>
+            <output expression="&#48516;&#54624;(A, 0, 7)" newline="True"/>
+        </body>
+    </function>
+    <function name="&#48516;&#54624;" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="A" type="Integer" array="True"/>
+            <parameter name="p" type="Integer" array="False"/>
+            <parameter name="r" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="A[r]"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="p - 1"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="p"/>
+            <declare name="&#51076;&#49884;" type="Integer" array="False" size=""/>
+            <while expression="j &lt; r">
+                <if expression="A[j] &lt;= x">
+                    <then>
+                        <assign variable="i" expression="i + 1"/>
+                        <assign variable="&#51076;&#49884;" expression="A[i]"/>
+                        <assign variable="A[i]" expression="A[j]"/>
+                        <assign variable="A[j]" expression="&#51076;&#49884;"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="j" expression="j + 1"/>
+            </while>
+            <assign variable="&#51076;&#49884;" expression="A[i + 1]"/>
+            <assign variable="A[i + 1]" expression="A[r]"/>
+            <assign variable="A[r]" expression="&#51076;&#49884;"/>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="i + 1"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-07-02 09:18:40 &#50724;&#51204;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDctMDI7MDg6NTU6NDgg7Jik7KCEOzEwMzgwOA=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDctMDI7MDk6MTg6NDAg7Jik7KCEOzE7MTAzOTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <output expression="sumOfDigits(n)" newline="True"/>
+        </body>
+    </function>
+    <function name="sumOfDigits" type="Integer" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Integer" array="False" size=""/>
+            <if expression="n &gt; 0">
+                <then>
+                    <assign variable="&#44208;&#44284;" expression="(n % 10) + sumOfDigits(n / 10)"/>
+                </then>
+                <else>
+                    <assign variable="&#44208;&#44284;" expression="0"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

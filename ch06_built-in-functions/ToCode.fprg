@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-12 08:50:12 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MDg6NDg6MTAg7Jik7ZuEOzEwNzU3NQ=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTI7MDg6NTA6MTIg7Jik7ZuEOzE7MTA3Njc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="ToCode(&quot;A&quot;)" newline="True"/>
+            <output expression="ToCode(&quot;Z&quot;)" newline="True"/>
+            <output expression="ToCode(&quot;a&quot;)" newline="True"/>
+            <output expression="ToCode(&quot;z&quot;)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

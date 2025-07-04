@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-19 06:02:33 &#50724;&#54980;"/>
+        <attribute name="created" value="eW9uZztPTUVOOzIwMjItMDYtMTk7MDM6MjI6NDYg7Jik7ZuEOzEwNzU3OA=="/>
+        <attribute name="edited" value="eW9uZztPTUVOOzIwMjItMDYtMTk7MDY6MDI6MzMg7Jik7ZuEOzM4OzEwNzc0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="S" type="Integer" array="True" size="7"/>
+            <declare name="top" type="Integer" array="False" size=""/>
+            <assign variable="top" expression="-1"/>
+            <assign variable="top" expression="&#45347;&#44592;(S, top, 15)"/>
+            <assign variable="top" expression="&#45347;&#44592;(S, top, 6)"/>
+            <assign variable="top" expression="&#45347;&#44592;(S, top, 2)"/>
+            <assign variable="top" expression="&#45347;&#44592;(S, top, 9)"/>
+            <output expression="&quot;&#47592; &#50948; &#50896;&#49548;&#45716; &quot; &amp; S[top] &amp; &quot;&#51077;&#45768;&#45796;.&quot;" newline="True"/>
+            <breakpoint/>
+            <assign variable="top" expression="&#45347;&#44592;(S, top, 17)"/>
+            <assign variable="top" expression="&#45347;&#44592;(S, top, 3)"/>
+            <output expression="&quot;&#47592; &#50948; &#50896;&#49548;&#45716; &quot; &amp; S[top] &amp; &quot;&#51077;&#45768;&#45796;.&quot;" newline="True"/>
+            <breakpoint/>
+            <assign variable="top" expression="&#44732;&#45236;&#44592;(S, top)"/>
+            <output expression="&quot;&#47592; &#50948; &#50896;&#49548;&#45716; &quot; &amp; S[top] &amp; &quot;&#51077;&#45768;&#45796;.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="&#44732;&#45236;&#44592;" type="Integer" variable="top">
+        <parameters>
+            <parameter name="S" type="Integer" array="True"/>
+            <parameter name="top" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <if expression="&#48708;&#50632;&#45208;(S, top)">
+                <then>
+                    <output expression="&quot;&#49828;&#53469; &#48512;&#51313;(underflow)&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="S[top] &amp; &quot;&#47484; &#44732;&#45253;&#45768;&#45796;(pop).&quot;" newline="True"/>
+                    <assign variable="top" expression="top - 1"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="&#45347;&#44592;" type="Integer" variable="top">
+        <parameters>
+            <parameter name="S" type="Integer" array="True"/>
+            <parameter name="top" type="Integer" array="False"/>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="x &amp; &quot;&#47484; &#45347;&#49845;&#45768;&#45796;(push).&quot;" newline="True"/>
+            <assign variable="top" expression="top + 1"/>
+            <assign variable="S[top]" expression="x"/>
+        </body>
+    </function>
+    <function name="&#48708;&#50632;&#45208;" type="Boolean" variable="&#44208;&#44284;">
+        <parameters>
+            <parameter name="S" type="Integer" array="True"/>
+            <parameter name="top" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#44208;&#44284;" type="Boolean" array="False" size=""/>
+            <assign variable="&#44208;&#44284;" expression="top &lt; 0"/>
+        </body>
+    </function>
+</flowgorithm>
